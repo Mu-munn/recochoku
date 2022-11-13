@@ -16,3 +16,7 @@ export const Colors = {
   // button
   button_main: '#e79827',
 }
+
+// あとで動かす
+export const fontSize_main = '20px'
+export const fontSize_02 = '15px'

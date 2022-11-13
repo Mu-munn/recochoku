@@ -11,7 +11,12 @@ import {
 import { AiTwotoneFire } from 'react-icons/ai'
 import { RiChat1Fill } from 'react-icons/ri'
 import { Band } from '../../src/types/Band'
-import { Colors, color_main } from '../../src/utils/color'
+import {
+  Colors,
+  color_main,
+  fontSize_02,
+  fontSize_main,
+} from '../../src/utils/color'
 
 type BandCardProps = {
   band: Band
@@ -25,14 +30,14 @@ export const BandCard = (props: BandCardProps) => {
         <Avatar name="Dan Abrahmov" src={band.iconUrl} />
         <Box>
           <Stack>
-            <Heading fontSize={'20px'} color={'gray.500'} h={'20px'}>
+            <Heading fontSize={'25px'} color={'gray.500'} h={'20px'}>
               {band.title}
             </Heading>
             <HStack>
               {band.instruments.map((instrument) => {
                 return (
                   <Text
-                    fontSize={'10px'}
+                    fontSize={'15px'}
                     fontWeight={'bold'}
                     color={Colors.button_main}
                     key={instrument}
@@ -43,19 +48,34 @@ export const BandCard = (props: BandCardProps) => {
               })}
             </HStack>
             {band.skill === 1 && (
-              <AiTwotoneFire color={Colors.button_main} size={'13px'} />
+              <AiTwotoneFire color={Colors.button_main} size={fontSize_main} />
             )}
             {band.skill === 2 && (
               <HStack>
-                <AiTwotoneFire color={Colors.button_main} size={'13px'} />
-                <AiTwotoneFire color={Colors.button_main} size={'13px'} />
+                <AiTwotoneFire
+                  color={Colors.button_main}
+                  size={fontSize_main}
+                />
+                <AiTwotoneFire
+                  color={Colors.button_main}
+                  size={fontSize_main}
+                />
               </HStack>
             )}
             {band.skill === 3 && (
               <HStack>
-                <AiTwotoneFire color={Colors.button_main} size={'13px'} />
-                <AiTwotoneFire color={Colors.button_main} size={'13px'} />
-                <AiTwotoneFire color={Colors.button_main} size={'13px'} />
+                <AiTwotoneFire
+                  color={Colors.button_main}
+                  size={fontSize_main}
+                />
+                <AiTwotoneFire
+                  color={Colors.button_main}
+                  size={fontSize_main}
+                />
+                <AiTwotoneFire
+                  color={Colors.button_main}
+                  size={fontSize_main}
+                />
               </HStack>
             )}
           </Stack>
@@ -68,7 +88,7 @@ export const BandCard = (props: BandCardProps) => {
           <RiChat1Fill color={Colors.button_main} size={'26px'} />
           <Text
             w={'90%'}
-            fontSize={'10px'}
+            fontSize={fontSize_02}
             fontWeight={'bold'}
             color={Colors.heading_sub}
             noOfLines={2}
