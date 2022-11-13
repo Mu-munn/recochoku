@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   Center,
+  Wrap,
 } from '@chakra-ui/react'
 import { AiTwotoneFire } from 'react-icons/ai'
 import { RiChat1Fill } from 'react-icons/ri'
@@ -30,14 +31,14 @@ export const BandCard = (props: BandCardProps) => {
         <Avatar name="Dan Abrahmov" src={band.iconUrl} />
         <Box>
           <Stack>
-            <Heading fontSize={'25px'} color={'gray.500'} h={'20px'}>
+            <Heading fontSize={'25px'} color={'gray.500'} h={'25px'}>
               {band.title}
             </Heading>
-            <HStack>
+            <Wrap>
               {band.instruments.map((instrument) => {
                 return (
                   <Text
-                    fontSize={'15px'}
+                    fontSize={'11px'}
                     fontWeight={'bold'}
                     color={Colors.button_main}
                     key={instrument}
@@ -46,7 +47,7 @@ export const BandCard = (props: BandCardProps) => {
                   </Text>
                 )
               })}
-            </HStack>
+            </Wrap>
             {band.skill === 1 && (
               <AiTwotoneFire color={Colors.button_main} size={fontSize_main} />
             )}
