@@ -1,5 +1,8 @@
 from flask import Flask, jsonify, request
 import re
+import sql_getData
+import sql_insert
+
 app = Flask(__name__)
 
 app.config['JSON_AS_ASCII'] = False # 文字化け防止
@@ -10,16 +13,18 @@ def createUser():
     bandName = request.form.get("bandName")
     bandMembers = request.form.get("bandMembers")
     musicGenreStr = request.form.get("musicGenre")
-    musicGenres = re.sub('(\[|\'|\]|\s)', '', musicGenreStr).split(',')
-    instrumentsStr = request.form.get("instruments")
-    instruments = re.sub('(\[|\'|\]|\s)', '', instrumentsStr).split(',')
+    musicGenres = musicGenreStr
+    # musicGenres = re.sub('(\[|\'|\]|\s)', '', musicGenreStr).split(',')
+    # instrumentsStr = request.form.get("instruments")
+    # instruments = re.sub('(\[|\'|\]|\s)', '', instrumentsStr).split(',')
     skills = request.form.get("skills")
     residence = request.form.get("residence")
+    sql_insert.insert(bandName, bandMembers, musicGenres, skills, residence)
     jsonData = {
         "bandName": bandName,
         "bandMembers": bandMembers,
         "musicGenres": musicGenres,
-        "instruments": instruments,
+        # "instruments": instruments,
         "skills": skills,
         "residence": residence
     }
@@ -27,6 +32,7 @@ def createUser():
 
 @app.route('/mock/group', methods=["GET"])
 def updateClientGroup():
+    result = sql_getData.getData()
     jsonData = {
         "bandName": "バンド名",
         "bandMembers": "23",
@@ -36,7 +42,9 @@ def updateClientGroup():
         "residence": 78
     }
     groups = [jsonData, jsonData, jsonData]
-    return groups
+    # return groups
+
+    return jsonify(result)
 
 @app.route('/good')
 def good():
