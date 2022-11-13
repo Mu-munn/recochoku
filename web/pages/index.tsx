@@ -1,9 +1,12 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Link } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
-  const sample = 'aa'
-  return <Box>Hello World!</Box>
+  return (
+    <Box>
+      <Link href="/serchPage">goto serchPage</Link>
+    </Box>
+  )
 }
 
 export default Home
