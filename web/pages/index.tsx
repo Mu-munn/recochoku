@@ -1,4 +1,4 @@
-import { Box, Link } from '@chakra-ui/react'
+import { Box, Link, Button } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import TopPageContent from '../components/TopPage/TopPageContent'
 import { Band } from '../src/types/Band'

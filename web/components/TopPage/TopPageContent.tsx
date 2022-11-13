@@ -1,4 +1,5 @@
-import { Box, Link, VStack } from '@chakra-ui/react'
+import { Box, Link, VStack, Button } from '@chakra-ui/react'
+import { IoSearchSharp } from 'react-icons/io5'
 import { Band } from '../../src/types/Band'
 import { Colors } from '../../src/utils/color'
 import { BandCard } from '../Band/BandCard'
@@ -39,6 +40,12 @@ const TopPageContent = (props: TopPageContentProps) => {
         {bands.map((band: Band) => {
           return <BandCard key={band.title} band={band} />
         })}
+        <Button bgColor="#e79827" color={'white'} display="block">
+          <Link href="/serchPage" display="flex">
+            <IoSearchSharp />
+            しらべる
+          </Link>
+        </Button>
       </VStack>
     </VStack>
   )
