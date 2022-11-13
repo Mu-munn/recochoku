@@ -1,10 +1,10 @@
 import { HStack, Box, VStack, Heading, Center, Button } from '@chakra-ui/react'
-import { SearchInput } from '../../components/SerchPage/instrmentInput'
 import { SectionLine } from '../../components/SerchPage/SectionLine'
 import { Colors } from '../../src/utils/color'
 import { TbSearch } from 'react-icons/tb'
-import { PlaceInput } from '../../components/SerchPage/placeInput'
 import { SkillInput } from '../../components/SerchPage/SkillInput'
+import { SearchInput } from '../../components/SerchPage/InstrmentInput'
+import { PlaceInput } from '../../components/SerchPage/PlaceInput'
 
 const serchPage = () => {
   const sectionMargin = '30px'
