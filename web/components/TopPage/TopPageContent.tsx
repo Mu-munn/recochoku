@@ -27,7 +27,7 @@ const TopPageContent = () => {
     <VStack py={4}>
       <VStack
         minH={'95vh'}
-        w={'90%'}
+        w={{ base: '100%', lg: '50%' }}
         bg={Colors.background_sub}
         borderRadius={'lg'}
         p={3}
