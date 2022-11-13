@@ -30,7 +30,7 @@ export const SerchForm = (props: any) => {
       <VStack>
         <Box
           minH={'200px'}
-          w={'90%'}
+          w={{ base: '100%', lg: '50%' }}
           bg={Colors.background_sub}
           borderRadius={'lg'}
           p={3}

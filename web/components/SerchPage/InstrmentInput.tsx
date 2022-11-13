@@ -44,7 +44,6 @@ export const InstrmentTag = (props: InstrmentTagProps) => {
         color={isSelected ? 'white' : Colors.button_main}
         onClick={(e) => {
           setIsSelected(!isSelected)
-          console.log('text')
         }}
       >
         {text}
