@@ -1,21 +1,20 @@
 import { Box, Link } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import TopPageContent from '../components/TopPage/TopPageContent'
-import { Band } from '../src/types/Band'
+import TopPageContent from '../../components/TopPage/TopPageContent'
+import { Band } from '../../src/types/Band'
 
-type HomeProps = {
+type ResultPage = {
   bands: Band[]
 }
-const Home = (props: HomeProps) => {
-  const { bands } = props
+const ResultPage: NextPage = () => {
   return (
     <Box>
-      <TopPageContent bands={bands}></TopPageContent>
+      <TopPageContent bands={[]}></TopPageContent>
     </Box>
   )
 }
 
-export default Home
+export default ResultPage
 
 export const getStaticProps = () => {
   const bands: Band[] = [
@@ -27,14 +26,6 @@ export const getStaticProps = () => {
       description:
         '初心者きてええええええええええええええええええええええええええええええええええええええええええ！',
       iconUrl: 'https://bit.ly/dan-abramov',
-    },
-    {
-      title: 'うんうんうん',
-      instruments: ['guiter', 'bocal'],
-      skill: 1,
-      residence: 5,
-      description: '初心者きてえええええええ！',
-      iconUrl: 'https://bit.ly/sage-adebayo',
     },
   ]
   return {

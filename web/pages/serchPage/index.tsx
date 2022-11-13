@@ -5,6 +5,7 @@ import { TbSearch } from 'react-icons/tb'
 import { SkillInput } from '../../components/SerchPage/SkillInput'
 import { SearchInput } from '../../components/SerchPage/InstrmentInput'
 import { PlaceInput } from '../../components/SerchPage/PlaceInput'
+import router from 'next/router'
 
 const serchPage = () => {
   const sectionMargin = '30px'
@@ -57,6 +58,9 @@ export const SerchForm = (props: any) => {
               bg={Colors.button_main}
               color={'white'}
               mb={5}
+              onClick={() => {
+                router.push('/ResultPage')
+              }}
             >
               検索
             </Button>
