@@ -6,7 +6,7 @@ def getData():
         # データベースに接続
         connection = mysql.connector.connect(host='localhost',
                                                 user='root',
-                                                password='Ymkn0805!',
+                                                password='password',
                                                 database='band')
 
 

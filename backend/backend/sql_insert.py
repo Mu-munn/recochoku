@@ -5,7 +5,7 @@ def insert(bandName, bandMemberNum, musicGenru, skills, residence):
     # データベースに接続
     connection = mysql.connector.connect(host='localhost',
                                         user='root',
-                                        password='Ymkn0805!',
+                                        password='password',
                                         database='band')
 
     with connection:
