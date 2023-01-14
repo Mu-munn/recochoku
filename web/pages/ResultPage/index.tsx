@@ -1,13 +1,13 @@
 import { Box, Link } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import TopPageContent from '../components/TopPage/TopPageContent'
-import { getRandomUserData } from '../libs/dummyDataFunc'
-import { Band } from '../src/types/Band'
+import TopPageContent from '../../components/TopPage/TopPageContent'
+import { getRandomUserData } from '../../libs/dummyDataFunc'
+import { Band } from '../../src/types/Band'
 
-type HomeProps = {
+type ResultPageType = {
   bands: Band[]
 }
-const Home = (props: HomeProps) => {
+const ResultPage = (props: ResultPageType) => {
   const { bands } = props
   return (
     <Box>
@@ -16,7 +16,7 @@ const Home = (props: HomeProps) => {
   )
 }
 
-export default Home
+export default ResultPage
 
 export const getStaticProps = () => {
   const bands = getRandomUserData(5)
