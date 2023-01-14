@@ -28,7 +28,7 @@ export const BandCard = (props: BandCardProps) => {
   return (
     <Box w={'90%'} bg={'white'} borderRadius={'20px'} p={5}>
       <HStack>
-        <Avatar name="Dan Abrahmov" src={band.iconUrl} />
+        <Avatar name="none" />
         <Box>
           <Stack>
             <Heading fontSize={'25px'} color={'gray.500'} h={'25px'}>
